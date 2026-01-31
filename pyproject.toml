@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "obsidian-mcp"
+version = "0.1.0"
+description = "MCP server for Obsidian vault management"
+authors = ["Maksim Poleshchuk <1998.maks1@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/Abrak98/obsidian-mcp"
+homepage = "https://github.com/Abrak98/obsidian-mcp"
+packages = [{include = "obsidian_mcp", from = "src"}]
+
+[tool.poetry.scripts]
+obs-mcp = "obsidian_mcp.mcp_server:main"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pydantic = "^2.5"
+pyyaml = "^6.0"
+mcp = "^1.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0"
+mypy = "^1.8"
+ruff = "^0.2"
+pre-commit = "^4.5.1"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

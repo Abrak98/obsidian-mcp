@@ -1,0 +1,17 @@
+# Build / runtime
+.venv/
+dist/
+*.egg-info/
+
+# Data
+poetry.lock
+
+# IDE / OS
+.idea/
+.vscode/
+__pycache__/
+*.pyc
+
+# Obsidian vault (test fixtures only, real vault is external)
+.obsidian/
+.trash/

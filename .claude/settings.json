@@ -1,0 +1,42 @@
+{
+  "language": "russian",
+  "askBeforeRunningTool": false,
+  "temperature": 0.2,
+  "skills": [],
+  "permissions": {
+    "allow": [
+      "Read(*)",
+      "Edit(*)",
+      "Write(*)",
+      "Bash(git:*)",
+      "Bash(python:*)",
+      "Bash(poetry:*)",
+      "Bash(pytest:*)",
+      "Bash(pip:*)",
+      "Bash(ls:*)",
+      "Bash(rm:*)",
+      "Bash(cat:*)"
+    ],
+    "deny": [
+      "Bash(rm:-rf*)",
+      "Bash(sudo:*)",
+      "Bash(curl:|bash*)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read",
+        "hooks": [{"type": "command", "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/block_obsidian_direct.sh"}]
+      },
+      {
+        "matcher": "Edit",
+        "hooks": [{"type": "command", "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/block_obsidian_direct.sh"}]
+      },
+      {
+        "matcher": "Write",
+        "hooks": [{"type": "command", "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/block_obsidian_direct.sh"}]
+      }
+    ]
+  }
+}
