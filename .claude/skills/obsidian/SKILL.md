@@ -92,7 +92,7 @@ description обязателен — отвечает на вопрос "ког�
 
 ## Vault Path
 
-Configured via `OBSIDIAN_VAULT_PATH` env var. See `.env.example`.
+Configured via `OBSIDIAN_VAULT_PATH` env var.
 
 ## Anti-patterns
 
