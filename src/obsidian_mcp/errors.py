@@ -1,0 +1,19 @@
+"""Vault and note errors."""
+
+
+class VaultError(Exception): ...
+
+
+class VaultNotConfiguredError(VaultError): ...
+
+
+class NoteNotFoundError(VaultError): ...
+
+
+class NoteAlreadyExistsError(VaultError): ...
+
+
+class TextNotFoundError(VaultError): ...
+
+
+class SectionNotFoundError(VaultError): ...
